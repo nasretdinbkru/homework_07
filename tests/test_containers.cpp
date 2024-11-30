@@ -3,13 +3,8 @@
 //
 #include <gtest/gtest.h>
 #include <iostream>
-
-//int main(int argc, char **argv)
-//{
-//  std::cout << "___tests start___" << std::endl;
-//  ::testing::InitGoogleTest(&argc, argv);
-//  return RUN_ALL_TESTS();
-//}
+#include "../src/linkedlist.h"
+#include "../src/dynarray.h"
 
 
 #include <string>
@@ -20,7 +15,8 @@ const char *actualValFalse = "hello world";
 const char *expectVal      = "hello gtest";
 
 TEST(StrCompare, CStrEqual) {
-  EXPECT_STREQ(expectVal, actualValTrue);
+  std::cout << "StrCompare Test Start\n";
+  EXPECT_STREQ(expectVal, actualValTrue) << "StrCompare FAIL" << actualValTrue;
 }
 
 TEST(StrCompare, CStrNotEqual) {
